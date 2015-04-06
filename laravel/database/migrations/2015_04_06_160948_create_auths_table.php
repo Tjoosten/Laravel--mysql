@@ -12,7 +12,7 @@ class CreateAuthsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('auths', function(Blueprint $table)
+		Schema::create('users', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->timestamps();
@@ -26,7 +26,7 @@ class CreateAuthsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('auths');
+		Schema::drop('users');
 	}
 
 }

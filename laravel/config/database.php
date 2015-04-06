@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'mysql_DB_1',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,12 +52,24 @@ return [
 			'prefix'   => '',
 		],
 
-		'mysql' => [
+		'mysql_DB_1' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB1_HOST', 'localhost'),
 			'database'  => env('DB1_DATABASE', 'Rasp'),
 			'username'  => env('DB1_USERNAME', 'root'),
 			'password'  => env('DB1_PASSWORD', '2fU3g5Yn'),
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+			'strict'    => false,
+		],
+
+		'mysql_DB_2' => [
+			'driver'    => 'mysql',
+			'host'      => env('DB_HOST', 'localhost'),
+			'database'  => env('DB_DATABASE', 'mysql'),
+			'username'  => env('DB1_USERNAME', 'root'),
+			'password'  => env('DB_PASSWORD', '2fU3g5Yn'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
